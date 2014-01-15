@@ -84,7 +84,7 @@ module FeedProcessorUtils
         end
       end
       if ["default", "lazy_images", "html_images"].include?(customized)
-        nominated_images = if ["default", "lazy_images"].include?(customized) && item_data[:lazy_image_tags].present?
+        nominated_images = if (customized == "lazy_images") && item_data[:lazy_image_tags].present?
           item_data[:lazy_image_tags]
         else
           item_data[:images_in_text]
