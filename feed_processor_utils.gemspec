@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'feed_processor_utils'
-  s.version     = '0.0.8'
+  s.version     = '0.0.9'
   s.date        = '2014-01-15'
   s.summary     = "Feed Processing toolbox"
   s.description = "utility classes to work with feeds"

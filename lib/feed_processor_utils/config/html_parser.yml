@@ -36,7 +36,7 @@
   :attribute: data-video
 :image:
   :selectors:
-  - img.entry-image
+  - "img.entry-image, img.image"
   :attribute: src
 :lazy_image_tags:
   :collection: true
