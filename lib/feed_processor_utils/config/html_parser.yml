@@ -36,7 +36,11 @@
   :attribute: data-video
 :image:
   :selectors:
-  - "img.entry-image, img.image"
+  - img.entry-image
+  :attribute: src
+:sky_image:
+  :selectors:
+  - img.image
   :attribute: src
 :lazy_image_tags:
   :collection: true

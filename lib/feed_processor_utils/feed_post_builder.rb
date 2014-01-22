@@ -66,11 +66,11 @@ module FeedProcessorUtils
       image_urls = []
       domain = URI.parse(item_data[:url] || item_data[:id])
       specific_images = if customized == "default"
-        [:og_image, :image]
+        [:og_image, :image, :sky_image]
       elsif customized == "og_image"
         [:og_image]
       elsif customized == "html_images"
-        [:image]
+        [:image, :sky_image]
       else
         []
       end
