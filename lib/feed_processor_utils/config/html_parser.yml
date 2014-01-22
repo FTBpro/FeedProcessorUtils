@@ -38,16 +38,12 @@
   :selectors:
   - img.entry-image
   :attribute: src
-:sky_image:
-  :selectors:
-  - img.image
-  :attribute: src
 :lazy_image_tags:
   :collection: true
   :selectors:
   - img
   :attribute: data-src
-:image_tags:
+:images_in_text:
   :collection: true
   :selectors:
   - img
