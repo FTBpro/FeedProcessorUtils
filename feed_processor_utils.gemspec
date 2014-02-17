@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = 'feed_processor_utils'
-  s.version     = '0.1.2'
+  s.version     = '0.1.3'
   s.date        = '2014-01-22'
   s.summary     = "Feed Processing toolbox"
   s.description = "utility classes to work with feeds"
@@ -10,6 +10,5 @@ Gem::Specification.new do |s|
   s.homepage    = 'http://rubygems.org/gems/feed_processor_utils'
   s.license     = 'MIT'
   s.add_dependency('nokogiri')
-  s.add_dependency('imagesize')
-  s.add_dependency('newer_image_size')
+  s.add_dependency('rmagick')
 end

@@ -30,24 +30,19 @@ module FeedProcessorUtils
     end
 
     def self.get_image_dimensions(uri)
-      match = match_based64?(uri)
-      if match
-        data = Base64.decode64(uri.split(match[0])[1])
-      else
-        begin
-          file = open(uri)
-        rescue => e
-          return [0,0]
+      begin
+        match = match_based64?(uri)
+        if match
+          base64 = uri.split(",").last
+          img = Magick::Image.read_inline(base64)[0]
+        else
+          img = Magick::Image.read(uri)[0]
         end
-        data = file.read
+        
+        [img.columns, img.rows]
+      rescue
+        [0,0]
       end
-
-      if file && data.encoding.name == "UTF-8"
-        NewerImageSize.new(file).size
-      else
-        ImageSize.new(data).get_size
-      end
-
     end
 
     def self.dimensions_ok?(dimensions)
