@@ -59,7 +59,7 @@ module FeedProcessorUtils
     def self.get_images(item_data, is_news, customized = "default")
       customized ||= "default"
       image_urls = []
-      domain = URI.parse(item_data[:url] || item_data[:id])
+      domain = URI.parse(URI.encode(item_data[:url] || item_data[:id]))
       specific_images = if customized == "default"
         [:og_image, :image]
       elsif customized == "og_image"

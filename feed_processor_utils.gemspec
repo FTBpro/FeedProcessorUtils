@@ -1,7 +1,7 @@
 Gem::Specification.new do |s|
   s.name        = 'feed_processor_utils'
-  s.version     = '0.1.3'
-  s.date        = '2014-01-22'
+  s.version     = '0.1.4'
+  s.date        = '2014-08-26'
   s.summary     = "Feed Processing toolbox"
   s.description = "utility classes to work with feeds"
   s.authors     = ["FTBpro"]
